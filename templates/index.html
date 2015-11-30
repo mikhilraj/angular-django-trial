@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+        <head>
+                <link rel="stylesheet" href="/assets/js/bower_components/bootstrap/dist/css/bootstrap.css">
+
+                <script src="/assets/js/bower_components/jquery/dist/jquery.js"></script>
+                <script src="/assets/js/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="/assets/js/bower_components/angular/angular.js"></script>
+                <script src="/assets/js/bower_components/angular-route/angular-route.js"></script>
+                <script src="/assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        </head>
+
+        <body ng-app="abc">
+                <div class="container-fluid">
+                        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+                                <ul class="nav navbar-nav">
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#login">Login</a></li>
+                                        <li><a href="#signup">Sign Up</a></li>
+                                </ul>
+                        </nav>
+                </div>
+
+                <div id="wrap"  ng-controller="GreetingController">
+                        {{greeting}}
+                        <div class="container-fluid" id="main">
+                                <ng-view></ng-view>
+                        </div>
+                </div>
+        </body>
+</html>
